@@ -1,0 +1,25 @@
+public class Solution {
+    public boolean Find(int target, int [][] array) {
+        
+        if(array != null && array.length != 0 && array[0].length != 0){
+            int row = 0;
+            int col = array[0].length - 1;
+            
+            while(row < array.length && col < array[0].length&& col >= 0 && row >= 0){
+                if(target == array[row][col]){
+                    return true;
+                }
+                else if(target > array[row][col]){
+                    row ++;
+                }
+                else if(target < array[row][col]){
+                    col --;
+                }
+            }
+            return false;
+        }
+        return false;
+        
+        
+    }
+}
